@@ -14,23 +14,24 @@
 <body>
     <div>
         <h3>Admin Login</h3>
-        @using (Html.BeginForm("Login","Account",FormMethod.Post))
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post))
         {
-            @Html.ValidationSummary(true)
+
             <p>
-                @Html.DisplayNameFor(Model=>Model.AdminUsername)
-                @Html.EditorFor(Model=>Model.AdminUsername)
-                @Html.ValidationMessageFor(Model=>Model.AdminUsername)
+                @Html.DisplayNameFor(Model => Model.AdminUsername)
+                @Html.EditorFor(Model => Model.AdminUsername)
+                @Html.ValidationMessageFor(Model => Model.AdminUsername)
             </p>
             <p>
-                @Html.DisplayNameFor(Model=>Model.AdminPassword)
-                @Html.PasswordFor(Model => Model.AdminPassword)      
-                @Html.ValidationMessageFor(Model=>Model.AdminPassword)
+                @Html.DisplayNameFor(Model => Model.AdminPassword)
+                @Html.PasswordFor(Model => Model.AdminPassword)
+                @Html.ValidationMessageFor(Model => Model.AdminPassword)
             </p>
             <p>
                 <input type="submit" value="Login" />
             </p>
-            @Html.ValidationMessageFor(Model=>Model.ErrorMessage)
+            @Html.ValidationSummary(true)
+            @Html.ValidationMessageFor(Model => Model.ErrorMessage)
         }
     </div>
 </body>

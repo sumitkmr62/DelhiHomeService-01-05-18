@@ -11,15 +11,12 @@ namespace DelhiHomeService.Web.UI.Areas.Admin.Controllers
 {
     public class AccountController : Controller
     {
-
         Login login = new Login();
 
-
-        public ActionResult Index()
+        public ActionResult Home()
         {
-            return View();
+            return View(1);
         }
-
 
         // GET: Admin/Account
         public ActionResult Login()
@@ -37,7 +34,7 @@ namespace DelhiHomeService.Web.UI.Areas.Admin.Controllers
                     FormsAuthentication.SetAuthCookie(account.AdminUsername, true);
                     Session["AdminID"] = account.AdminID;
                     Session["AdminUsername"] = account.AdminUsername;
-                    return RedirectToAction("Index", "Account");
+                    return RedirectToAction("Home", "Account");
                 }
                 else
                 {
