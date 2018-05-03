@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Home</title>
+</head>
+<body>
+    <div>
+        
+        Welcome @Session["AdminUsername"]
+        
+        <div>@Html.ActionLink("Products", "ViewProduct")</div>
+        
+        <div>@Html.ActionLink("Services", "ViewService")</div>
+        
+        <div>@Html.ActionLink("Orders", "ViewOrder")</div>
+
+
+        
+        <table>
+            <tr></tr>
+        </table>
+    </div>
+</body>
+</html>

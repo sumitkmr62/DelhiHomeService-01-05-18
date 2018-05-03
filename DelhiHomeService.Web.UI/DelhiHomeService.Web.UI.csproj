@@ -134,7 +134,8 @@
     <Content Include="Views\web.config" />
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Account\Login.cshtml" />
-    <Content Include="Areas\Admin\Views\Account\Home.cshtml" />
+    <Content Include="Areas\Admin\Views\Action\Home.cshtml" />
+    <Content Include="Areas\Admin\Views\Action\ViewProduct.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -146,7 +147,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\Action\" />
     <Folder Include="Areas\Admin\Views\AdminAction\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Controllers\" />

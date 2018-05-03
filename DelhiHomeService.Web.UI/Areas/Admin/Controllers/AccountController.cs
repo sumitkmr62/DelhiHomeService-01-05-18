@@ -34,7 +34,7 @@ namespace DelhiHomeService.Web.UI.Areas.Admin.Controllers
                     FormsAuthentication.SetAuthCookie(account.AdminUsername, true);
                     Session["AdminID"] = account.AdminID;
                     Session["AdminUsername"] = account.AdminUsername;
-                    return RedirectToAction("Home", "Account");
+                    return RedirectToAction("Home", "Action");
                 }
                 else
                 {

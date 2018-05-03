@@ -1,0 +1,39 @@
+﻿@model IEnumerable<DelhiHomeService.Models.Product>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Product</title>
+</head>
+<body>
+    <div>
+        <div>
+            @Html.ActionLink("Add Product", "AddProduct")
+        </div>
+
+        <table>
+            <tr>
+                <td>@Html.DisplayNameFor(Model => Model.ProductID)</td>
+                <td>@Html.DisplayNameFor(Model => Model.ProductName)</td>
+                <td>@Html.DisplayNameFor(Model => Model.ProductDescription)</td>
+                <td>@Html.DisplayNameFor(Model => Model.ProductImage)</td>
+            </tr>
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(m => p.ProductID)</td>
+                    <td>@Html.DisplayFor(m => p.ProductName)</td>
+                    <td>@Html.DisplayFor(m => p.ProductDescription)</td>
+                    <td>@Html.DisplayFor(m => p.ProductImage)</td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</body>
+</html>
