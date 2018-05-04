@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DelhiHomeService.Models;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
-
+using DelhiHomeService.Models;
 
 namespace DelhiHomeService.Data.Admin
 {
@@ -45,6 +41,28 @@ namespace DelhiHomeService.Data.Admin
                 }
                 return product;
 
+            }
+        }
+
+        public bool AddProduct(DelhiHomeService.Models.Product product)
+        {
+            using (SqlConnection con = new SqlConnection(GetConnection()))
+            {
+                SqlCommand cmd = new SqlCommand("addproduct", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("product_name", product.ProductName);
+                cmd.Parameters.AddWithValue("product_description", product.ProductDescription);
+                cmd.Parameters.AddWithValue("product_image", product.ProductImage);
+                con.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
         }
     }

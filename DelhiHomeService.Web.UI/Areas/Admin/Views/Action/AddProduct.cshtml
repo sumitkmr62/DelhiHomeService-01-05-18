@@ -1,0 +1,36 @@
+﻿@model DelhiHomeService.Models.Product
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddProduct</title>
+</head>
+<body>
+    @using(Html.BeginForm("AddProduct", "Action", FormMethod.Post))
+    {
+    <div>
+        <table>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.ProductName)</td>
+                <td>@Html.EditorFor(m => m.ProductName)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.ProductDescription)</td>
+                <td>@Html.EditorFor(m => m.ProductDescription)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.ProductImage)</td>
+                <td>@Html.TextBox("Upload Image", "", new { type = "file" })</td>
+            </tr>
+            <tr><td><input type="submit" value="Add" /></td></tr>
+        </table>
+    </div>
+    }
+</body>
+</html>

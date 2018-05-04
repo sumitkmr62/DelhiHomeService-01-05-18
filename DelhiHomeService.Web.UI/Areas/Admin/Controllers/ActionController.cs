@@ -33,6 +33,21 @@ namespace DelhiHomeService.Web.UI.Areas.Admin.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public ActionResult AddProduct()
+        {
+            
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddProduct(Models.Product pm)
+        {
+            Data.Admin.Product p = new Data.Admin.Product();
+            var products = p.AddProduct(pm);
+            return View(products);
+        }
+
 
 
     }

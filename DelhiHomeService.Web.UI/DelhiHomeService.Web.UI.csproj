@@ -136,6 +136,7 @@
     <Content Include="Areas\Admin\Views\Account\Login.cshtml" />
     <Content Include="Areas\Admin\Views\Action\Home.cshtml" />
     <Content Include="Areas\Admin\Views\Action\ViewProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\Action\AddProduct.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
